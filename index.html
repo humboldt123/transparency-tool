@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Transparency Tool</title>
+        
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="description" content="Lower the alpha of pixels based off their relation to a specific color">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+
+        <script src="https://www.lactame.com/lib/image-js/0.21.2/image.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-dragdata@2.2.3/dist/chartjs-plugin-dragdata.min.js"></script>
+
+    </head>
+    <body class="pure-g">
+        <div class="pure-u-md-1-2">
+            <h1>Transparency Tool 🖼️🔧</h1>
+            <p>Lower the alpha of pixels based off their relation to a specific color</p>
+            <p>Upload an image:</p>
+            <input type="file" accept="image/*" onchange="uploadImage(event);" autocomplete="off">
+            <canvas id="colors" style="width:100%;"></canvas>
+            Red <input id="red" type="number" size="3" onchange="updateColor(0);" value="255" autocomplete="off" style="appearance: textfield;">
+            Green <input id="green" type="number" size="3" onchange="updateColor(1);" value="255" autocomplete="off" style="appearance: textfield;">
+            Blue <input id="blue" type="number" size="3" onchange="updateColor(2);" value="255" autocomplete="off" style="appearance: textfield;">
+            <button onclick="updateImageAlpha()">Update Alpha</button>
+        </div>
+        <div class="pure-u-md-1-2">
+            <img id="preview" style="image-rendering: pixelated; max-width: 40%;">
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
