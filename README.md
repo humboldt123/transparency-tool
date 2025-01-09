@@ -8,3 +8,4 @@ Check out the website at [transparency-tool.vivime.info](https://transparency-to
 
 ## Demo
 ![Demo GIF](./demo.gif)
+
